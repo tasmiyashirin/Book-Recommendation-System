@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block bodyblock %}
+
+<div class="navbar">
+
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'bookrecommend' %}">Homepage</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'toptenbooks' %}">Top Ten Books</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'toptenwriters' %}">Top Ten Writers</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'mostreviewedbooks' %}">Most Reviewed Books</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="https://currentaffairs-adda247-com.cdn.ampproject.org/v/s/currentaffairs.adda247.com/books-authors/amp/?amp_js_v=a6&amp_gsa=1&usqp=mq331AQKKAFQArABIIACAw%3D%3D#aoh=16377820028498&referrer=https%3A%2F%2Fwww.google.com&amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fcurrentaffairs.adda247.com%2Fbooks-authors%2F">Latest Books</a></button>
+
+
+
+</div>
+
+<h1>Top Ten Movies Chart based on the Popularity:-</h1>
+<div class="image">
+<img src="{% static 'graph1.png'%}" alt="not found"></div>
+
+{% endblock %}

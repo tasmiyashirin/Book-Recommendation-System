@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block bodyblock %}
+
+
+<div class="navbar">
+
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'toptenbooks' %}">Top Ten Books</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'toptenwriters' %}">Top Ten Writers</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="{% url 'mostreviewedbooks' %}">Most Reviewed Books</a></button>
+<button class="button-73" role="button"><a style="text-decoration:none" href="https://currentaffairs-adda247-com.cdn.ampproject.org/v/s/currentaffairs.adda247.com/books-authors/amp/?amp_js_v=a6&amp_gsa=1&usqp=mq331AQKKAFQArABIIACAw%3D%3D#aoh=16377820028498&referrer=https%3A%2F%2Fwww.google.com&amp_tf=From%20%251%24s&ampshare=https%3A%2F%2Fcurrentaffairs.adda247.com%2Fbooks-authors%2F">Latest Books</a></button>
+
+
+</div>
+
+<div class="inp">
+
+<form method="POST">
+    {% csrf_token %}
+    <h1>Book Name</h1>
+    <textarea type="textarea" placeholder="Little Women" name="input" rows="4" cols="50">{{inp}}</textarea>
+    <h5>Type your book's name</h5>
+    <button class="button-54" role="button" type="submit">Submit</button>
+</form></div>
+
+<h1>Result</h1>
+<h4>Books That You May Like</h4>
+{% for x in data %}
+<pre class='input2'>{{x}}</pre>
+{% endfor %}
+
+
+{% endblock %}
